@@ -1,0 +1,479 @@
+body {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  display: flex;
+}
+.black {
+  color: #000000;
+}
+.none__style {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.wrapper__item__header {
+  align-items: center;
+}
+
+.logo {
+  align-items: center;
+  margin-right: 100px;
+}
+
+.wrapper__logo {
+  align-items: center;
+}
+
+.text__logo {
+  padding-left: 15px;
+  font-size: 2em;
+  letter-spacing: 0;
+}
+
+.nav__list__item {
+  padding: 30px;
+  transition: all 0.5s;
+}
+
+.nav__list__item:hover {
+  background: #2ca1bc;
+  color: #ffffff;
+}
+
+.list {
+  align-self: stretch;
+  align-items: center;
+}
+
+.after__line::after {
+  content: '';
+  position: absolute;
+  background-color: #b8b4b4;
+  top: 25px;
+  height: 30px;
+  width: 1px;
+  opacity: 0.5;
+}
+
+#nav__list {
+  padding: 30px 0;
+}
+
+.wrapper__aside {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar__user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.avatar {
+  width: 10%;
+  justify-content: space-between;
+}
+
+.add__user {
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: #ff4500;
+}
+
+.btn__header {
+  position: relative;
+  border: none;
+  border-radius: 100%;
+  width: 34px;
+  height: 34px;
+  background: #ffffff;
+}
+.plus {
+  height: 34px;
+  width: 34px;
+  position: relative;
+}
+
+.plus::after {
+  content: '';
+  position: absolute;
+  background: #ff4500;
+  right: 11px;
+  top: 14px;
+  width: 25px;
+  height: 5px;
+}
+.plus::before {
+  content: '';
+  z-index: 1;
+  right: 21px;
+  top: 4px;
+  position: absolute;
+  background: #ff4500;
+  width: 5px;
+  height: 25px;
+}
+/* ================================================================= */
+
+.header__bottom {
+  width: 100%;
+  height: 580px;
+  background: url('../assets/mountain.jpeg');
+  background-size: cover;
+}
+
+.wrapper__slide {
+  height: 580px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wrapper__text__slider {
+  padding: 30px 0;
+  justify-content: space-between;
+}
+
+.heart__bottom {
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.wrapper__heart {
+  margin-right: 20px;
+}
+
+.counter__like {
+  color: #a1abae84;
+}
+
+.text__title {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.text__slide {
+  margin-top: 15px;
+  color: #c2ced2;
+}
+.title__list__slide {
+  margin-bottom: 27px;
+}
+
+.text__line,
+.list__slide ul li {
+  color: #a1abae84;
+}
+.list__slide ul li {
+  padding-bottom: 10px;
+}
+.hover {
+  transition: all 0.5s linear;
+}
+.hover:hover {
+  color: #ffffff;
+}
+
+.text__line::after {
+  position: absolute;
+  content: '';
+  background-color: #a1abae84;
+  right: 66px;
+  top: 132px;
+  width: 73px;
+  height: 1px;
+}
+
+.list__slide {
+  justify-content: flex-end;
+}
+
+.list__slide ul {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.constainer__indexbox__slide {
+  margin-bottom: 30px;
+}
+
+.avatar__user__slide {
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.line {
+  margin: 0 15px;
+}
+
+.line::after {
+  content: '';
+  margin: 0 15px;
+  position: absolute;
+  background-color: #b8b4b4;
+  left: calc(100% - 84vw);
+  height: 40px;
+  width: 1px;
+  opacity: 0.5;
+}
+
+.choice {
+  align-items: center;
+}
+.choice p {
+  padding: 0 5px;
+  color: #b8b4b476;
+  font-size: 20px;
+}
+
+.btn__choice {
+  background: inherit;
+  border: none;
+  color: #b8b4b476;
+  transition: all 0.5s;
+}
+
+.btn__choice:hover {
+  color: #ffff;
+}
+
+/* ================================================================= */
+
+.title__pinboard {
+  padding: 50px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort__pinboard {
+  align-items: center;
+}
+
+.text__title__pinboard {
+  font-size: 25px;
+}
+
+.text__sort__by {
+  color: #a19f9f;
+  margin-right: 15px;
+}
+
+.circle {
+  position: relative;
+  margin-left: 15px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+}
+
+.circle::after {
+  content: '';
+  margin-top: 2.5px;
+  margin-left: 2.5px;
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  background-color: #ffffff;
+}
+
+.red {
+  background-color: #ff0000;
+}
+
+.orange {
+  background-color: #f45000;
+}
+
+.blue {
+  background-color: #0000ff;
+}
+
+.green {
+  background-color: #008000;
+}
+
+.bg__pinboard__items {
+  padding: 30px 0;
+  background-color: #c6c2c262;
+}
+
+.pinboard__items {
+  justify-content: space-between;
+  flex-direction: wrap;
+  flex-wrap: wrap;
+}
+
+.pinborad__item {
+  margin-bottom: 10px;
+  height: 350px;
+  width: 350px;
+  padding: 30px 20px 20px 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.item__content {
+  justify-content: space-between;
+}
+
+.heart__counter {
+  align-items: center;
+}
+
+.margin {
+  margin-left: 15px;
+}
+
+.background__1 {
+  background-image: url('../assets/wallpaperbetter.com_1920x1080.jpg');
+  background-size: cover;
+}
+
+.background__2 {
+  background-image: url('../assets/wallpaperbetter.com_1920x1080_1.jpg');
+  background-size: cover;
+}
+
+.background__3 {
+  background-image: url('../assets/wallpaperbetter.com_1920x1080_2.jpg');
+  background-size: cover;
+}
+
+.background__4 {
+  background-image: url('../assets/wallpaperbetter.com_1920x1080_3.jpg');
+  background-size: cover;
+}
+
+.background__5 {
+  background-image: url('../assets/wallpaperbetter.com_1920x1080_4.jpg');
+  background-size: cover;
+}
+
+.background__6 {
+  background-image: url('../assets/wallpaperbetter.com_1920x1080_5.jpg');
+  background-size: cover;
+}
+
+.background__7 {
+  background-image: url('../assets/wallpaperbetter.com_1920x1080_6.jpg');
+  background-size: cover;
+}
+
+.background__8 {
+  background-image: url('../assets/wallpaperbetter.com_1920x1080_7.jpg');
+  background-size: cover;
+}
+
+.text__pin {
+  font-size: 26px;
+  margin-top: 30px;
+  color: #999595;
+}
+.time__pin {
+  margin-top: 15px;
+  color: #cdcccc;
+}
+
+.avatar__user__pin {
+  margin-right: 10px;
+  width: 30px;
+}
+.constainer__indexbox__pin {
+  justify-content: space-between;
+}
+
+.flex__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.volume__pin,
+.play__pin {
+  align-items: center;
+}
+.size__volume,
+.size__play {
+  width: 35px;
+  margin-right: 10px;
+}
+
+.soundtrack__pin {
+  height: 5px;
+  width: 100px;
+  border-radius: 4px;
+  background-color: black;
+}
+.soundtrack__pin::after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 250px;
+  border-radius: 4px;
+  background-color: #00000088;
+}
+
+.soundtrack__pin1 {
+  height: 5px;
+  width: 200px;
+  border-radius: 4px;
+  background-color: black;
+}
+.soundtrack__pin1::after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 250px;
+  border-radius: 4px;
+  background-color: #00000088;
+}
+
+.color__lite {
+  font-size: 20px;
+  color: #8a8989;
+}
+
+.color__white {
+  color: #ffffff;
+}
+.copuright {
+  margin-top: 35px;
+}
+.style__copuright {
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-family: 'Open Sans';
+  color: #000000;
+  line-height: 1.2;
+  text-align: center;
+}

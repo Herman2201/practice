@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="./style/style.css" type="text/css" />
+    <link rel="stylesheet" href="./style/heart-animation.css" />
+    <title>Chronos</title>
+  </head>
+  <body>
+    <header>
+      <div class="header__top">
+        <div class="container">
+          <div class="flex wrapper__item__header">
+            <div class="logo">
+              <a href="#" class="flex wrapper__logo">
+                <svg
+                  viewBox="0 0 156.33 177.4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                >
+                  <path
+                    d="M156.33 41.91v90.36l-16.55-9.55v-61a9.19 9.19 0 1 0-11.28 0v54.46l-16.54-9.56V16.29zM83.75 90.36l16.93 9.77V9.77L83.75 0z"
+                    fill="#3f494b"
+                  />
+                  <path
+                    d="M50.26 161.41l78.25-45.2-16.55-9.55-52.8 30.49a9.19 9.19 0 1 1-5.64-9.77l47.16-27.24-16.93-9.76-78.25 45.2zM139.78 122.72l16.55 9.55-78.17 45.13-16.65-9.51z"
+                    fill="#6e8284"
+                  />
+                  <path
+                    d="M72.47.07v83.56l-28.1 16.22v.1l-16.54 9.57V61.86l.27-.22a9.19 9.19 0 1 0-11.55.22v54.16L0 125.57V42.01l28.06-16.22v-.1l16.54-9.55v47.65l-.27.22a9.19 9.19 0 1 0 11.55-.22V9.62z"
+                    fill="#197e4f"
+                  />
+                </svg>
+                <p class="text__logo">Chronos</p>
+              </a>
+            </div>
+            <div class="flex wrapper__aside">
+              <nav class="flex list">
+                <ul id="nav__list">
+                  <li class="after__line none__style">
+                    <a href="#" class="nav__list__item">Pinboard</a>
+                  </li>
+                  <li class="after__line none__style">
+                    <a href="#" class="nav__list__item">Calendar</a>
+                  </li>
+                  <li class="after__line none__style">
+                    <a href="#" class="nav__list__item">Friends</a>
+                  </li>
+                  <li class="none__style">
+                    <a href="#" class="nav__list__item">Message</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="avatar flex">
+                <div class="avatar__user">
+                  <img src="./assets/avatar.png" alt="" />
+                </div>
+                <div class="add__user flex">
+                  <button class="btn__header"><p class="plus"></p></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          <div class="wrapper__slide flex">
+            <div class="wrapper__text__slider flex">
+              <div class="container__text">
+                <div class="heart__bottom flex">
+                  <div class="wrapper__heart">
+                    <button class="heart">
+                      <div class="heart-flip"></div>
+                    </button>
+                  </div>
+                  <p class="counter__like">10 023</p>
+                </div>
+                <div class="title__slide">
+                  <p class="text__title">Roadtrip on Highway One</p>
+                  <p class="text__slide">26 January - 1 Fabruary</p>
+                </div>
+              </div>
+              <div class="container__list">
+                <div class="title__list__slide">
+                  <p class="text__line">FEATURED</p>
+                </div>
+                <div class="list__slide flex">
+                  <ul>
+                    <li class="none__style">
+                      <a href="#" class="hover"> Blog Post</a>
+                    </li>
+                    <li class="none__style">
+                      <a href="#" class="hover">Event</a>
+                    </li>
+                    <li class="none__style">
+                      <a href="#" class="hover">Photo</a>
+                    </li>
+                    <li class="none__style">
+                      <a href="#" class="hover">Musik</a>
+                    </li>
+                    <li class="none__style">
+                      <a href="#" class="hover">Video</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="constainer__indexbox__slide flex">
+              <div class="inbox__people__slide flex">
+                <div class="avatar__user__slide">
+                  <img src="./assets/avatar.png" alt="" />
+                </div>
+                <div class="avatar__user__slide">
+                  <img src="./assets/avatar.png" alt="" />
+                </div>
+                <div class="avatar__user__slide">
+                  <img src="./assets/avatar.png" alt="" />
+                </div>
+              </div>
+              <span class="line"></span>
+              <div class="choice flex">
+                <button class="btn__choice">Yes</button>
+                <p>/</p>
+                <button class="btn__choice">No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="pinboard">
+        <div class="container">
+          <div class="title__pinboard flex">
+            <p class="text__title__pinboard">Your pinboard</p>
+            <div class="sort__pinboard flex">
+              <p class="text__sort__by">SORT BY</p>
+              <span class="circle red"></span>
+              <span class="circle orange"></span>
+              <span class="circle blue"></span>
+              <span class="circle green"></span>
+            </div>
+          </div>
+        </div>
+        <div class="bg__pinboard__items">
+          <div class="container">
+            <div class="pinboard__items flex">
+              <div class="pinborad__item background__1">
+                <div class="item__content flex">
+                  <div class="heart__counter flex">
+                    <div>
+                      <button class="heart">
+                        <div class="heart-flip"></div>
+                      </button>
+                    </div>
+                    <p class="counter__like margin color__white">1001</p>
+                  </div>
+                  <span class="circle orange"></span>
+                </div>
+              </div>
+              <div class="pinborad__item">
+                <div class="item__content flex">
+                  <div class="heart__counter flex">
+                    <div>
+                      <button class="heart">
+                        <div class="heart-flip"></div>
+                      </button>
+                    </div>
+                    <p class="counter__like margin">22</p>
+                  </div>
+                  <span class="circle blue"></span>
+                </div>
+                <p class="text__pin">
+                  This pinboard is filled with cool events, photos and media. I
+                  love it.
+                </p>
+              </div>
+              <div class="pinborad__item flex__column background__2">
+                <div class="wrapper">
+                  <div class="item__content flex">
+                    <div class="heart__counter flex">
+                      <div>
+                        <button class="heart">
+                          <div class="heart-flip"></div>
+                        </button>
+                      </div>
+                      <p class="counter__like margin color__white">99</p>
+                    </div>
+                  </div>
+                  <p class="text__pin color__white">
+                    Company retreat in Deer Valley, Utah
+                  </p>
+                  <p class="time__pin">3pm - 8pm</p>
+                </div>
+                <div class="constainer__indexbox__pin flex">
+                  <div class="inbox__people__pin flex">
+                    <div class="avatar__user__pin">
+                      <img src="./assets/avatar.png" alt="" />
+                    </div>
+                    <div class="avatar__user__pin">
+                      <img src="./assets/avatar.png" alt="" />
+                    </div>
+                    <div class="avatar__user__pin">
+                      <img src="./assets/avatar.png" alt="" />
+                    </div>
+                  </div>
+                  <span class="line"></span>
+                  <div class="choice flex">
+                    <button class="btn__choice color__lite">Yes</button>
+                    <p class="color__white">/</p>
+                    <button class="btn__choice color__lite">No</button>
+                  </div>
+                </div>
+              </div>
+              <div class="pinborad__item flex__column background__3">
+                <div class="wrapper">
+                  <div class="item__content flex">
+                    <div class="heart__counter flex">
+                      <div>
+                        <button class="heart">
+                          <div class="heart-flip"></div>
+                        </button>
+                      </div>
+                      <p class="counter__like margin color__white">22</p>
+                    </div>
+                  </div>
+                  <p class="text__pin color__white margin__text">
+                    Daft Pu ink - <span class="black">Get lu</span>cky
+                  </p>
+                </div>
+                <div class="volume__pin flex">
+                  <div class="size__volume">
+                    <img src="./assets/volume.png" alt="" />
+                  </div>
+                  <span class="soundtrack__pin"></span>
+                </div>
+              </div>
+              <div class="pinborad__item">
+                <div class="item__content flex">
+                  <div class="heart__counter flex">
+                    <div>
+                      <button class="heart">
+                        <div class="heart-flip"></div>
+                      </button>
+                    </div>
+                    <p class="counter__like margin">22</p>
+                  </div>
+                  <span class="circle blue"></span>
+                </div>
+                <p class="text__pin">What if the world revolves around Doge?</p>
+              </div>
+              <div class="pinborad__item flex__column background__4">
+                <div class="wrapper">
+                  <div class="item__content flex">
+                    <div class="heart__counter flex">
+                      <div>
+                        <button class="heart">
+                          <div class="heart-flip"></div>
+                        </button>
+                      </div>
+                      <p class="counter__like margin color__white">2</p>
+                    </div>
+                    <span class="circle orange"></span>
+                  </div>
+                  <p class="text__pin color__white">Summer Nights</p>
+                </div>
+                <div class="play__pin flex">
+                  <div class="size__play">
+                    <img src="./assets/play.png" alt="" />
+                  </div>
+                  <span class="soundtrack__pin1"></span>
+                </div>
+              </div>
+              <div class="pinborad__item">
+                <div class="item__content flex">
+                  <div class="heart__counter flex">
+                    <div>
+                      <button class="heart">
+                        <div class="heart-flip"></div>
+                      </button>
+                    </div>
+                    <p class="counter__like margin">22</p>
+                  </div>
+                  <span class="circle blue"></span>
+                </div>
+                <p class="text__pin">
+                  Everything is so cool around here. So flat and stuff.
+                </p>
+              </div>
+              <div class="pinborad__item background__5">
+                <div class="item__content flex">
+                  <div class="heart__counter flex">
+                    <div>
+                      <button class="heart">
+                        <div class="heart-flip"></div>
+                      </button>
+                    </div>
+                    <p class="counter__like margin">1001</p>
+                  </div>
+                  <span class="circle red"></span>
+                </div>
+              </div>
+              <div class="pinborad__item background__6">
+                <div class="item__content flex">
+                  <div class="heart__counter flex">
+                    <div>
+                      <button class="heart">
+                        <div class="heart-flip"></div>
+                      </button>
+                    </div>
+                    <p class="counter__like margin">1001</p>
+                  </div>
+                  <span class="circle orange"></span>
+                </div>
+                <p class="text__pin color__white">Santa Monica Pier</p>
+              </div>
+              <div class="pinborad__item background__7">
+                <div class="item__content flex">
+                  <div class="heart__counter flex">
+                    <div>
+                      <button class="heart">
+                        <div class="heart-flip"></div>
+                      </button>
+                    </div>
+                    <p class="counter__like margin">1001</p>
+                  </div>
+                  <span class="circle green"></span>
+                </div>
+              </div>
+              <div class="pinborad__item">
+                <div class="item__content flex">
+                  <div class="heart__counter flex">
+                    <div>
+                      <button class="heart">
+                        <div class="heart-flip"></div>
+                      </button>
+                    </div>
+                    <p class="counter__like margin">22</p>
+                  </div>
+                  <span class="circle blue"></span>
+                </div>
+                <p class="text__pin">I love anime <3</p>
+              </div>
+              <div class="pinborad__item background__8">
+                <div class="item__content flex">
+                  <div class="heart__counter flex">
+                    <div>
+                      <button class="heart">
+                        <div class="heart-flip"></div>
+                      </button>
+                    </div>
+                    <p class="counter__like margin">1001</p>
+                  </div>
+                  <span class="circle red"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="copuright">
+        <p class="style__copuright">
+          Copyright © 2022, Just attached for example.
+        </p>
+        <p class="style__copuright">
+          All trademarks and copyrights belong to their respective owners.
+        </p>
+      </div>
+    </footer>
+    <script>
+      document
+        .querySelectorAll('.heart, .heart-button')
+        .forEach((button) =>
+          button.addEventListener('click', (e) =>
+            button.classList.toggle('active')
+          )
+        );
+    </script>
+  </body>
+</html>
