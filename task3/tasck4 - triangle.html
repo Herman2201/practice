@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <canvas id="rectangle"></canvas>
+    <canvas id="triangle"></canvas>
+
+    <script>
+      function Triangle(x, y, width, height) {
+        this.height = height;
+        this.width = width;
+        this.x = x;
+        this.y = y;
+        this.draw = function () {
+          let canvas = document.getElementById('triangle');
+          let ctx = canvas.getContext('2d');
+          ctx.beginPath();
+          ctx.fillStyle = '#abf';
+          ctx.moveTo(this.x - this.width / 2, this.y - this.height / 3);
+          ctx.lineTo(this.x, this.y - (height / 3) * 2);
+          ctx.lineTo(this.x + this.width / 2, this.y - this.height / 3);
+          ctx.fill();
+        };
+      }
+
+      function Rectangle(x, y, width, height) {
+        this.height = height;
+        this.width = width;
+        this.x = x;
+        this.y = y;
+
+        this.draw = function () {
+          let canvas = document.getElementById('rectangle');
+          let ctx = canvas.getContext('2d');
+          ctx.fillStyle = '#fba';
+          ctx.fillRect(this.x, this.y, this.width, this.height);
+        };
+      }
+
+      let figure = new Rectangle(25, 25, 100, 200);
+      figure.draw();
+
+      let figure1 = new Triangle(100, 300, 200, 400);
+      figure1.draw();
+    </script>
+  </body>
+</html>
