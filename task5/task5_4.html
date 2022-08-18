@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Структура DOM</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+      const a = document.documentElement;
+      function showDOM() {
+        const wnd = window.open(
+          '',
+          '',
+          'width=300,height=200,left=550,top=300'
+        );
+        wnd.document.write('<!DOCTYPE html>');
+        wnd.document.write('<html lang="en">');
+        showChildNodes(document.documentElement, wnd);
+        wnd.document.write('<\/body>');
+        wnd.document.write('<\/html>');
+      }
+      function showChildNodes(node, doc) {
+        const childNodes = node.childNodes[2];
+        const getChild = (item) => {
+          console.log(item, item.children);
+          if (item.children.length === 0) {
+            doc.document.write(item.outerHTML);
+            return;
+          }
+          doc.document.write(`<${item.localName}>`);
+          for (let i = 0; item.children.length > i; i += 1) {
+            getChild(item.children[i]);
+          }
+          doc.document.write(`</${item.localName}>`);
+        };
+        getChild(childNodes);
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Структура DOM</h1>
+    <div>
+      <h2>Вывод структуры DOM</h2>
+      <p>
+        Этот код открывает новое окно и выводит в него структуру текущего
+        документа
+      </p>
+    </div>
+    <div>
+      <h2>Запуск кода</h2>
+      <p>Для запуска кода щелкните <a href="javascript:showDOM()">здесь</a></p>
+    </div>
+  </body>
+</html>
