@@ -68,37 +68,20 @@
       }
     </style>
     <script type="text/javascript">
-      /*
-      	1. Оптимизируйте код
-      	2. Сделайте так, чтобы выпадающие элементы div не исчезали сразу.
-      	3. Задание выполнить с помощью JS. Ршения с помощью CSS не использовать.
-      */
+      const hideTimer = {};
 
-      /*
-       **	Функция показывает меню с указанным ID
-       */
-      let timeout;
+      const setVisibility = (id, visibile) => {
+        const obj = document.getElementById(id);
+        obj.style.visibility = visibile ? 'visible' : '';
+      };
+
       function showMenu(objID) {
-        var obj = document.getElementById(objID);
-        obj.style.visibility = 'visible';
-        if (timeout) {
-          clearTimeout(timeout);
-          timeout = undefined;
-        }
+        setVisibility(objID, true);
+        clearTimeout(hideTimer[objID]);
       }
-      /*
-       **	Функция убирает меню с указанным ID
-       */
+
       function hideMenu(objID) {
-        console.log(timeout);
-        if (!timeout) {
-          timeout = setTimeout(() => {
-            var obj = document.getElementById(objID);
-            obj.style.visibility = '';
-          }, 100);
-        } else {
-          clearTimeout(timeout);
-        }
+        hideTimer[objID] = setTimeout(() => setVisibility(objID, false), 100);
       }
     </script>
   </head>

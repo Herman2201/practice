@@ -1,86 +1,111 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 
 <html>
-<head>
-	<title>Раскрывающейся списка</title>
-	<meta charset="utf-8">
-	<style type="text/css">
-		ul.expandable li { list-style-image: url('../../images/point.gif') }
-		li ul.expandable { display: block } /* выставить в none */
-	</style>
-	<script type="text/javascript">
-		/*
-			Опишите функцию setPlusIcon(), которая 
-			- устанавливает для элементов li значок [+], 
-				если этот элемент имеет вложенный список
-			- регистрирует функцию aClick в качестве обработчика события onclick
-				для всех ссылок
-		*/
-		/*
-			Запустите функцию setPlusIcon() при загрузке страницы
-		*/
-		function setPlusIcon(){
-		}
-		/*
-			Опишите функцию aClick(), которая обрабатывает щелчок по ссылке
-			1. Получите объект - ссылку, по которой был сделан щелчок 
-			2. Найдите родительский li
-			3. Найдите вложенный список
-			4. Если вложенных списков нет - разрешите переход по ссылке
-			5. Назначьте вложенному списку нужные свойства и поменяйте иконку
-			6. Запретите переход по ссылке
-		*/
-		function aClick(e){
-		}	
-		
-	</script>
-</head>
+  <head>
+    <title>Раскрывающейся списка</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+      ul.expandable li {
+        list-style-image: url('./img/point.gif');
+      }
+      li ul.expandable {
+        display: block;
+      } /* выставить в none */
+    </style>
+    <script type="text/javascript">
+      /*
+      	Опишите функцию setPlusIcon(), которая
+      	- устанавливает для элементов li значок [+],
+      		если этот элемент имеет вложенный список
+      	- регистрирует функцию aClick в качестве обработчика события onclick
+      		для всех ссылок
+      */
+      /*
+      	Запустите функцию setPlusIcon() при загрузке страницы
+      */
+      function setPlusIcon() {
+        const ul = document.getElementsByClassName('expandable');
+        for (let i = 0; i < ul.length; i += 1) {
+          const li = ul[i];
+          if (li.children.length > 0) {
+            for (let j = 0; j < li.children.length; j += 1) {
+              const liChild = li.children[j];
+              if (liChild.children.length > 1) {
+                liChild.setAttribute(
+                  'style',
+                  "list-style-image: url('./img/plus.gif')"
+                );
+              }
+              const a = liChild.getElementsByTagName('a');
+              if (j < 3) {
+                for (let k = 0; k < a.length; k += 1) {
+                  a[k].setAttribute('onclick', 'aClick(event)');
+                }
+              }
+            }
+          }
+        }
+      }
+      function aClick(e) {
+        console.log(e);
+        const a = e.target;
+        const parrentLi = e.path[1];
+        if (parrentLi.children.length > 1) {
+          parrentLi.setAttribute(
+            'style',
+            "list-style-image: url('./img/minus.gif'); pointer-events: none;"
+          );
+        }
+      }
+      document.addEventListener('DOMContentLoaded', () => setPlusIcon());
+    </script>
+  </head>
 
-<body>
-	<h1>Пример раскрывающегося списка</h1>
-	<ul class="expandable">
-		<li>
-			<a href="#">Книги</a>
-			<ul class="expandable">
-				<li>
-					<a href="#">Отечественные</a>
-					<ul class="expandable">
-						<li><a href="#">Детективы</a></li>
-						<li><a href="#">Научная фантастика</a></li>
-						<li><a href="#">Исторические</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Зарубежные</a>
-					<ul class="expandable">
-						<li><a href="#">Детективы</a></li>
-						<li><a href="#">Научная фантастика</a></li>
-						<li><a href="#">Исторические</a></li>
-					</ul>
-				</li>
-			</ul>
-		</li>
- 		<li>
-			<a href="#">DVD</a>
-			<ul class="expandable">
-				<li>
-					<a href="#">Отечественные</a>
-					<ul class="expandable">
-						<li><a href="#">Детективы</a></li>
-						<li><a href="#">Научная фантастика</a></li>
-						<li><a href="#">Исторические</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Зарубежные</a>
-					<ul class="expandable">
-						<li><a href="#">Детективы</a></li>
-						<li><a href="#">Научная фантастика</a></li>
-						<li><a href="#">Исторические</a></li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul>
-</body>
+  <body>
+    <h1>Пример раскрывающегося списка</h1>
+    <ul class="expandable">
+      <li>
+        <a href="#">Книги</a>
+        <ul class="expandable">
+          <li>
+            <a href="#">Отечественные</a>
+            <ul class="expandable">
+              <li><a href="#">Детективы</a></li>
+              <li><a href="#">Научная фантастика</a></li>
+              <li><a href="#">Исторические</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Зарубежные</a>
+            <ul class="expandable">
+              <li><a href="#">Детективы</a></li>
+              <li><a href="#">Научная фантастика</a></li>
+              <li><a href="#">Исторические</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">DVD</a>
+        <ul class="expandable">
+          <li>
+            <a href="#">Отечественные</a>
+            <ul class="expandable">
+              <li><a href="#">Детективы</a></li>
+              <li><a href="#">Научная фантастика</a></li>
+              <li><a href="#">Исторические</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Зарубежные</a>
+            <ul class="expandable">
+              <li><a href="#">Детективы</a></li>
+              <li><a href="#">Научная фантастика</a></li>
+              <li><a href="#">Исторические</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </body>
 </html>

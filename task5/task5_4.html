@@ -27,6 +27,7 @@
             return;
           }
           doc.document.write(`<${item.localName}>`);
+          doc.document.write(item.firstChild.data);
           for (let i = 0; item.children.length > i; i += 1) {
             getChild(item.children[i]);
           }
