@@ -10,24 +10,25 @@
       }
     </style>
     <script type="text/javascript">
-      var cell = 10;
-      var row = 10;
+      var cell = 11;
+      var row = 11;
 
       function createDOM() {
+        const table = document.createElement('table');
         const tablearea = document.getElementById('d');
 
-        const table = document.createElement('table');
+        for (let i = 1; i < cell; i++) {
+          const tr = document.createElement('tr');
 
-        for (let i = 0; i < cell; i += 1) {
-          const td = document.createElement('td');
-          for (let j = 0; j < row; j += 1) {
-            const tr = document.createElement('tr');
-            tr.textContent = j + 1;
-            td.appendChild(tr);
+          table.appendChild(tr);
+
+          for (let j = 1; j < row; j++) {
+            const td = document.createElement('td');
+            tr.appendChild(td);
+            td.innerText = i * j;
           }
-          table.appendChild(td);
         }
-        tablearea.appendChild(table);
+        tablearea.append(table);
       }
     </script>
   </head>
