@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html>
   <head>
     <title>Структура DOM</title>
@@ -21,7 +20,6 @@
       function showChildNodes(node, doc) {
         const childNodes = node.childNodes[2];
         const getChild = (item) => {
-          console.log(item, item.children);
           if (item.children.length === 0) {
             doc.document.write(item.outerHTML);
             return;
