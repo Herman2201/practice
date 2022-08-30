@@ -79,8 +79,24 @@ a {
   width: 150px;
   height: 45px;
   border: 1px solid #000000;
-  background-color: #ffffff;
+  background: inherit;
+  color: #000000;
   transition: 0.5s ease-out;
+}
+.modal-content {
+  width: 603px;
+  height: 462px;
+}
+.modal-header {
+  flex-direction: column;
+}
+.modal-title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+
+  color: #28292d;
 }
 
 #modal__window:hover {
@@ -100,13 +116,14 @@ a {
   list-style: none;
 }
 
+.w-1 svg {
+  margin-left: 10px;
+}
 .link {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 15%;
-  padding: 30px 0;
   border-left: 1px solid #e5e5e5;
 }
 .link:last-child {
@@ -114,11 +131,14 @@ a {
 }
 .link a {
   font-weight: 700;
-  margin-right: 15px;
+  padding: 30px 38px;
+  transition: 0.2s ease-out;
 }
-.w-2 {
-  width: 17%;
+
+.link a:hover {
+  opacity: 0.6;
 }
+
 .link::after {
   content: '';
   position: absolute;
@@ -131,9 +151,11 @@ a {
   margin-bottom: 51px;
 }
 .nav__page {
-  width: 15%;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+}
+.nav__page svg {
+  padding: 0 15px;
 }
 .active__page {
   color: #f39b14;
@@ -436,3 +458,76 @@ footer {
   margin-top: 10px;
 }
 /*       FOOTER        */
+
+#checkbox1 {
+  display: none;
+}
+#checkbox1 + label {
+  position: relative;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: inherit;
+  border: 1px solid #dedede;
+  text-align: center;
+}
+#checkbox1 + label:before {
+  font-size: 15px;
+}
+#checkbox1:checked + label {
+  border: 1px solid #dedede;
+}
+#checkbox1:checked + label:before {
+  content: '✔';
+  color: orange;
+  font-size: 10px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}
+.agreement1 {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 130%;
+  color: #28292d;
+}
+.main {
+  color: #f39b14;
+}
+
+.cont {
+  position: relative;
+}
+.placeholder1 {
+  position: absolute;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  top: 50%;
+  padding-left: 26px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #28292d;
+}
+.red {
+  color: red;
+}
+.form-control:focus ~ .placeholder1,
+.form-control:valid ~ .placeholder1 {
+  display: none;
+}
+
+.prev__popular {
+  background-color: inherit;
+  margin-left: 134px;
+}
+.next__popular {
+  background-color: inherit;
+  margin-right: 134px;
+}
+
+.container__slider {
+  display: flex;
+  overflow: hidden;
+  max-width: 570px;
+}

@@ -18,7 +18,9 @@
           $(ul).slideToggle();
         });
         div.on('mouseleave', () => {
-          $(ul).slideToggle();
+          if ($(ul).attr('style') === 'display: none;') {
+            $(ul).slideToggle();
+          }
           div.removeAttr('style');
           lastChild.removeAttr('style');
         });
